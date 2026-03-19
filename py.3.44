@@ -1,0 +1,10 @@
+
+numero = int(input("Ingresa un numero entero y positivo: "))
+
+suma = 0
+
+while numero >= 0:
+    suma = suma + numero
+    numero = int(input("Ingresa otro numero: "))
+
+print("La suma total es:", suma)
