@@ -1,0 +1,14 @@
+import random
+
+secreto = random.randint(1, 10)
+
+numero = int(input("Adivina el número: "))
+
+while numero != secreto:
+    if numero < secreto:
+        print("Es mayor")
+    else:
+        print("Es menor")
+    numero = int(input("Intenta otra vez: "))
+
+print("¡Correcto :D!")
