@@ -1,24 +1,31 @@
+
 import random
+import time
 
-palabras = ["Alcachofa", "Estropajo", "Insano", "Therian"]
+numeros = []
 
-palabra_secreta = random.choice(palabras)
+for i in range(5):
+    numero = random.randint(1, 9)
+    numeros.append(numero)
 
-progreso = ["_"] * len(palabra_secreta)
+print("Memoriza estos números:")
+print(numeros)
 
-while "_" in progreso:
-    print("Palabra:", " ".join(progreso))
+time.sleep(3)
+
+print("\n" * 20)
+
+print("Ingresa los números en el mismo orden:")
+
+correcto = True
+
+for i in range(5):
+    respuesta = int(input("Número: "))
     
-    letra = input("Ingresa una letra: ")
-    
-    acierto = False
-    
-    for i in range(len(palabra_secreta)):
-        if palabra_secreta[i] == letra:
-            progreso[i] = letra
-            acierto = True
-    
-    if acierto == False:
-        print("Letra incorrecta")
+    if respuesta != numeros[i]:
+        correcto = False
 
-print("¡Ganaste :D! La palabra era:", palabra_secreta)
+if correcto:
+    print("¡Ganaste :D!")
+else:
+    print("Perdiste xd")
