@@ -1,26 +1,28 @@
 import random
+import time
 
-palabras = ["pantufla", "medialuna", "pan", "torta"]
+numeros = []
 
-palabra = random.choice(palabras)
+for i in range(5):
+    numeros.append(random.choice([1,2,3,4,5,6,7,8,9]))
 
-progreso = ["_"] * len(palabra)
+print("Memoriza estos números:")
+print(numeros)
 
-progreso[0] = palabra[0]
+time.sleep(3)
 
-while "_" in progreso:
-    print("Palabra:", " ".join(progreso))
-    
-    letra = input("Ingresa una letra: ")
-    
-    acierto = False
-    
-    for i in range(len(palabra)):
-        if palabra[i] == letra:
-            progreso[i] = letra
-            acierto = True
-    
-    if acierto == False:
-        print("Letra incorrecta")
+print("\n" * 20)
 
-print("¡Ganaste :0! La palabra era:", palabra)
+entrada = input("Números: ")
+lista = entrada.split(",")
+
+correcto = True
+
+for i in range(5):
+    if int(lista[i]) != numeros[i]:
+        correcto = False
+
+if correcto:
+    print("¡Ganaste!")
+else:
+    print("Perdiste")
