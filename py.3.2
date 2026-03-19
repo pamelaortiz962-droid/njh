@@ -1,0 +1,12 @@
+texto = input("Ingresa una cadena de texto: ")
+
+letra = input("ingresa la letra que quieras buscar: ")
+
+
+contador = 0
+
+for caracter in texto:
+    if caracter == letra:
+        contador = contador + 1
+
+print("La letra aparece" , contador, "veces")
