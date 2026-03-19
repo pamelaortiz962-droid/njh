@@ -1,0 +1,16 @@
+numeros = []
+
+for i in range(5):
+    numero = int(input("Ingresa un número entero: "))
+    numeros.append(numero)
+
+suma = 0
+contador = 0
+
+for numero in numeros:
+    suma = suma + numero
+    contador = contador + 1
+
+promedio = suma / contador
+
+print("La media (promedio) del arreglo es:", promedio)
