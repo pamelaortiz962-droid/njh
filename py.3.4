@@ -1,0 +1,19 @@
+import random
+
+corredor1 = 0
+corredor2 = 0
+segundos = 0
+meta = 100
+
+while corredor1 < meta and corredor2 < meta:
+    corredor1 += random.randint(1, 10)
+    corredor2 += random.randint(1, 10)
+    segundos += 1
+
+# Determinar quién ganó (el que llegó a la meta primero)
+if corredor1 >= meta and corredor2 >= meta:
+    print("Empate en", segundos, "segundos")
+elif corredor1 >= meta:
+    print("Ganó el corredor 1 en", segundos, "segundos")
+else:
+    print("Ganó el corredor 2 en", segundos, "segundos")
